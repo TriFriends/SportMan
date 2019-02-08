@@ -1,16 +1,24 @@
 $(document).ready(function () {
-    $('.nav__list img').on('mouseover',function () {
-        let $currect_element = $(this)
-        let $next_element = $(this).next()
-        console.log($currect_element,$next_element)
-        $($next_element).css({
-            visibility: 'visible'
+    let $paragraphs = $('.nav__list p')
+        .get()
+    for(let i = 0; i < $paragraphs.length; i++) {
+        $($paragraphs[i]).offset({
+            top: $($paragraphs[i]).prev().offset().top
         })
-        $($next_element).offset({
-            top: `${$($currect_element).offset().top + 10}`,
-            left: `${$($currect_element).offset().left - 200}`
+        $($paragraphs[i]).css({
+            height: $($paragraphs[i]).closest('li').outerHeight() - 10 + 'px'
         })
-    })
+    }
+    // $('.nav__list img').on('mouseover', function () {
+    //     let $current = $(this),
+    //         $next = $(this).next()
+    //     $(next).css({
+    //         visibility: '',
+    //     })
+    // })
+    // $('.nav__list img').on('mouseout', function () {
 
-    $('.nav__list img').on('mouse')
+    // })
+
+    console.log($paragraphs)
 })

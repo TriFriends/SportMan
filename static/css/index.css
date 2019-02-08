@@ -119,19 +119,25 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+  z-index: 3;
 }
 
 .nav__list li {
-  margin: 3vh 1vw;
+  padding: 3vh 1vw;
 }
 
 .nav__list p {
   position: absolute;
-  visibility: hidden;
-  width: 120px;
-  background: rgba(0,0,0,0.85);
+  visibility: visible;
+  width: 180px;
+  background: lightslategray;
   color: white;
-  padding: 
+  padding: 10px 15px;
+  letter-spacing: 1.2px;
+  word-spacing: 5px;
+  z-index: 2;
+  display: block;
 }
 
 .nav__icon {
