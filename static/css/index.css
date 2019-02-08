@@ -1,0 +1,141 @@
+.hero_section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    color: white;
+}
+
+.black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.black::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url('../graphics/grid.png');
+  background-size: 140px;
+  background-position: center;
+  filter: blur(2px);
+}
+
+.hero_section__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+    z-index: -2;
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+    .hero_section__video  {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .hero_section__video  {
+      width: auto;
+      height: 100%;
+    }
+  }
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+}
+
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10vw;
+  max-width: 35vw;
+}
+
+.hero__title {
+  font-size: 4em;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-top: 2vh !important;
+  max-width: 40vw;
+}
+
+.hero__callbutton {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 1em 3em;
+  background: rgb(247, 14, 14);
+  margin-top: 4em;
+  border-radius: 5px;
+  border: 3px solid rgb(173, 0, 0);
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero__callbutton:hover {
+  background: rgb(173, 0, 0);
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nav__list li {
+  margin: 3vh 1vw;
+}
+
+.nav__list p {
+  position: absolute;
+  visibility: hidden;
+  width: 120px;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 
+}
+
+.nav__icon {
+  width: 3vw;
+  min-width: 30px;
+  height: auto;
+}
